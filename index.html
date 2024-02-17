@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock | By Rafay Malik</title>
+    <style>
+        .h1{
+            font-weight: bolder;
+            font-family: sans-serif;
+            color: #fff;
+            text-align: center;
+            margin-top: 44px;
+        }
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+        .center{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #clock{
+            font-size: 40px;
+            background-color: orange;
+            padding: 20px 50px;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-family: sans-serif;
+            
+
+        }
+        #banner span{
+            font-size: 45px;
+            font-family: sans-serif;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">DIGITAL CLOCK | CREATED BY RAFAY MALIK</h1>
+    <div class="center">
+        <div id="banner"><span>Your Local Time</span></div>
+        <div id="clock"></div>
+    </div>
+</body>
+<script>
+    const clock = document.getElementById('clock')
+    // const clock document.querySelector('#clock')
+    setInterval(function(){
+        let date = new Date();
+        // console.log(date.toLocaleTimeString());
+        clock.innerHTML = date.toLocaleTimeString(); 
+        
+    }, 1000);
+</script>
+</html>
